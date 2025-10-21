@@ -1,8 +1,13 @@
-from config import Config
+from dataclasses import dataclass
+from .config import Config
 
-class APIServices():
+@dataclass
+class APIServices:
 
     config: Config
 
-    def __init__(self, config_file : str):
-        self.config = Config(config_file)
+    @staticmethod
+    async def create(config_path: str):
+        return APIServices(
+            config = Config(config_path),
+        )

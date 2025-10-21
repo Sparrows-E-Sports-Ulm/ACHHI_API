@@ -1,1 +1,2 @@
 pyhocon==0.3.61
+fastapi==0.119.1
