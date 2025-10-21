@@ -30,7 +30,7 @@ class Database:
     password: str
 
 
-
+@dataclass
 class Config():
     database: Database
     def __init__(self, config_file=None):
